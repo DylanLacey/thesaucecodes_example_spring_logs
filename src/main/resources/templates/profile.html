@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Hey, it's a profle profile!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Hey, it's [[${#httpServletRequest.remoteUser}]]'s profile!</h1>
+<br/>
+<p>What a lovely profile!</p>
+<p th:text="profile" />
+</body>
+</html>

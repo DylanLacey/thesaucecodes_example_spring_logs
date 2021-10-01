@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+  <title>Welcome</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>This page might be ugly, but it's beautiful on the inside.</h1>
+<p And at last, rest. />
+<br/>
+<h2 th:inline="text">Should you want to logout, [[${#httpServletRequest.remoteUser}]]...</h2>
+<form th:action="@{/logout}" method="post">
+  <input type="submit" value="This is your exit"/>
+</form>
+</body>
+</html>
