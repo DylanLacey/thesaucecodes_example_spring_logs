@@ -33,7 +33,7 @@ public class ProfileControllerTest {
 
     @Test
     public void getProfile() throws Exception {
-        logger.debug("IN SOME RACHET TEST");
+        logger.debug("IN SOME TEST I WROTE");
         assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/profile",
                 String.class)).contains("What a lovely profile");
     }

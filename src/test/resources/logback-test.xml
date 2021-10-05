@@ -1,0 +1,32 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FileOutput" class="ch.qos.logback.core.FileAppender">
+        <file>testLog.log</file>
+
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="SauceSourceFileOutput" class="ch.qos.logback.core.FileAppender">
+        <file>sauceSource.log</file>
+
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="FileOutput" />
+    </root>
+
+    <logger name="com.saucelabs" level="DEBUG">
+        <appender-ref ref="SauceSourceFileOutput" />
+    </logger>
+
+</configuration>
