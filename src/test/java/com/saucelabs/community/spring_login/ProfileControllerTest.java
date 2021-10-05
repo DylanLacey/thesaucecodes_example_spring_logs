@@ -31,13 +31,6 @@ public class ProfileControllerTest {
     @Autowired
     private TestRestTemplate restTemplate;
 
-//        @Test
-//        public void getProfile() throws Exception {
-//            mvc.perform(MockMvcRequestBuilders.get("/profile").accept(MediaType.APPLICATION_JSON))
-//                    .andExpect(status().isOk())
-//                    .andExpect(content().string(containsString("What a lovely profile")));
-//        }
-
     @Test
     public void getProfile() throws Exception {
         logger.debug("IN SOME RACHET TEST");
